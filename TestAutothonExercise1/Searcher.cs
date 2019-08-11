@@ -31,12 +31,14 @@ namespace TestAutothonExercise1
         public RemoteWebDriver Driver { get; private set; }
         public Func<string, Uri> UrlBuilder;
         public Func<RemoteWebDriver, IEnumerable<IWebElement>>[] Parsers { get; private set; } = new Func<RemoteWebDriver, IEnumerable<IWebElement>>[0];
+
         public Searcher(RemoteWebDriver driver, Func<string, Uri> urlBuilder, params Func<RemoteWebDriver, IEnumerable<IWebElement>>[] parsers)
         {
             this.Driver = driver;
             this.Parsers = parsers;
             this.UrlBuilder = urlBuilder;
         }
+
         public IEnumerable<IWebElement> Search(string keyword)
         {            
             Driver.Navigate().GoToUrl(UrlBuilder(keyword));

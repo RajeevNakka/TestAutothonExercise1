@@ -9,27 +9,11 @@ using System.Text;
 namespace TestAutothonExercise1
 {
     public static class LinkFinders
-    {
-        public static IEnumerable<IWebElement> FindWikiLinks(RemoteWebDriver driver)
-        {
-            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            return waitForElement.Until(c => c.FindElements(By.XPath("//a[contains(@href,'wikipedia')]")))
-                                 .Take(1); ;
+    {        
+        public static IEnumerable<IWebElement> FindWiki(this RemoteWebDriver driver) => Find(driver, "wikipedia");
+        public static IEnumerable<IWebElement> FindImdb(this RemoteWebDriver driver) => Find(driver, "imdb");
 
-            //return driver.FindElementsByXPath("//a[contains(@href,'wikipedia')]")
-            //                //.Where(e => e.Text.ToLower().Contains("did you mean") == false)
-            //                .Take(1);
-        }
-
-        public static IEnumerable<IWebElement> FindImdbLinks(RemoteWebDriver driver)
-        {
-            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            return waitForElement.Until(c => c.FindElements(By.XPath("//a[contains(@href,'imdb')]")))
-                                 .Take(1);
-
-            //return driver.FindElementsByXPath("//a[contains(@href,'imdb')]")
-            //                //.Where(e => e.Text.ToLower().Contains("did you mean") == false)
-            //                .Take(1);
-        }
+        public static IEnumerable<IWebElement> Find(this RemoteWebDriver driver, string hrefSubString) 
+            => driver.WaitForElementsAndGet(By.XPath($"//a[contains(@href,'{hrefSubString}')]"));    
     }
 }

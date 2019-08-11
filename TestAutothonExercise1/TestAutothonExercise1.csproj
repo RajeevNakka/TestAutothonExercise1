@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Selenium.Helper" Version="1.0.1" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
   </ItemGroup>
 
