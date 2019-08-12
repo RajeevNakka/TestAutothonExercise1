@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     class Program
     {

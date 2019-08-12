@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestAutothon.ReportGenerator;
-using TestAutothonExercise1.Parsers;
+using TestAutothonLib.Parsers;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     public static class Problem1
     {
@@ -37,15 +37,7 @@ namespace TestAutothonExercise1
             "Interstellar",
             "Se7en"
         };
-        public static IEnumerable<IWebElement> RankWikiLinks(this RemoteWebDriver driver, string key)
-        {
-            var wikiLinks = LinkFinders.FindWiki(driver);
-
-            return (from link in wikiLinks
-                    orderby link.Text.FindSimilarity(key) descending
-                    select link);
-        }
-
+       
         static readonly object locker = new object();
         public static void Solve()
         {
@@ -92,7 +84,7 @@ namespace TestAutothonExercise1
                 //Search Movie
                 Searcher searcher = new Searcher(driver: chrome,
                                                  urlBuilder: SearchUrlBuilders.Bing,
-                                                 parsers: (driver) => RankWikiLinks(driver, movieName));
+                                                 parsers: (driver) => LinkFinders.FindWiki(driver).RankLinks(movieName));
 
                 var result = searcher.Search($"{movieName} film").Select(link => link.GetAttribute("href")).ToList();
 

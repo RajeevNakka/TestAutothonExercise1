@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
-    static class Extensions
+    public static class Extensions
     {
         public static string ExcludeSymbols(this string src) => new string(src.Where(char.IsLetterOrDigit).ToArray());
         public static float FindSimilarity(this string string1, string string2, bool excludeSymbols = true)

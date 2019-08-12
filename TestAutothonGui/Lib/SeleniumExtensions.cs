@@ -3,9 +3,9 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     public static class SeleniumExtensions
     {
@@ -60,5 +60,12 @@ namespace TestAutothonExercise1
 
         public static WebDriverWait Wait(this RemoteWebDriver driver, int timeOutInSeconds = 5)
             => new WebDriverWait(driver, TimeSpan.FromSeconds(timeOutInSeconds));
+
+        public static IEnumerable<IWebElement> RankLinks(this IEnumerable<IWebElement> links, string key)
+        {
+            return (from link in links
+                    orderby link.Text.FindSimilarity(key) descending
+                    select link);
+        }
     }
 }

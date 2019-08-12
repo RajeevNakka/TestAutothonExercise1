@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     static class Extensions
     {

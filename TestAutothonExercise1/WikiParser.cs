@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TestAutothonExercise1.Parsers
+namespace TestAutothonLib.Parsers
 {
     public class Parser
     {

@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestAutothon.ReportGenerator;
-using TestAutothonExercise1.Parsers;
+using TestAutothonLib.Parsers;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     public static class Problem1
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestAutothonExercise1
+namespace TestAutothonLib
 {
     public class SearchUrlBuilders
     {
