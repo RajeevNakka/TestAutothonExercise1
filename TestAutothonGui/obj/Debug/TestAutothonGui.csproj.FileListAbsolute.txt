@@ -1,0 +1,15 @@
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\TestAutothonGui.exe.config
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\TestAutothonGui.exe
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\TestAutothonGui.pdb
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.Properties.Resources.resources
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.csproj.GenerateResource.cache
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.csproj.CoreCompileInputs.cache
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.exe
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.pdb
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\WebDriver.dll
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\WebDriver.xml
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.csproj.CopyComplete
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\chromedriver.exe
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\TestAutothonReport.html
+D:\Git\TestAutothonExercise1\TestAutothonGui\bin\Debug\TestAutothon.ReportGenerator.dll
+D:\Git\TestAutothonExercise1\TestAutothonGui\obj\Debug\TestAutothonGui.Form1.resources

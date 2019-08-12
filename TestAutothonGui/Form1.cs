@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestAutothonExercise1;
 
 namespace TestAutothonGui
 {
@@ -15,6 +16,11 @@ namespace TestAutothonGui
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Problem1.Solve();
         }
     }
 }

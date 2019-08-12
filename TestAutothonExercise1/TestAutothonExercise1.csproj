@@ -11,7 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="TestAutothon.ReportGenerator">
+      <HintPath>C:\Users\rajee\Downloads\TestAutothon.ReportGenerator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestAutothonReport.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
