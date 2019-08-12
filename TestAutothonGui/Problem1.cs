@@ -37,7 +37,7 @@ namespace TestAutothonLib
             "Interstellar",
             "Se7en"
         };
-       
+
         static readonly object locker = new object();
         public static void Solve()
         {
@@ -53,7 +53,7 @@ namespace TestAutothonLib
                     movies.Add(info);
                 }
             });
-            
+
             //Assert
             //Report
             foreach (var movie in movies)
@@ -62,12 +62,15 @@ namespace TestAutothonLib
             }
             var templatePath = Path.Combine(Environment.CurrentDirectory, "TestAutothonReport.html");
             var html = ReportGenerator.Generate(GetTableData(movies), templatePath);
-            File.WriteAllText(Path.Combine(outputDirectory, "report.html"), html);
+            string reportPath = Path.Combine(outputDirectory, "report.html");
+            File.WriteAllText(reportPath, html);
+
+            new ChromeDriver(Environment.CurrentDirectory).Navigate().GoToUrl(reportPath);
         }
 
         public static IEnumerable<IEnumerable<string>> GetTableData(IEnumerable<MovieInfo> movies)
         {
-            yield return new string[] { "Name", "WikiLink", "Wiki_Directors","Wiki_Screenshot", "ImdbLink", "Imdb_Directors", "Wiki_Screenshot", "Result" };
+            yield return new string[] { "Name", "WikiLink", "Wiki_Directors", "Wiki_Screenshot", "ImdbLink", "Imdb_Directors", "Wiki_Screenshot", "Result" };
             foreach (var movie in movies)
             {
                 yield return movie.ToArray();
